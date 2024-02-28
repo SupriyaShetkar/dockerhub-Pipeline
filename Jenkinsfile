@@ -13,7 +13,7 @@ pipeline {
 
     stage('Build image') {
   
-       app = docker.build(9763479341/test")
+       app = docker.build("9763479341/test")
     }
 
 
