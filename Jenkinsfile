@@ -15,13 +15,13 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'Supriya', refspec: '+refs/changes/*:refs/changes/*', url: 'https://github.com/SupriyaShetkar/dockerhub-Pipeline.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: 'master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', refspec: '+refs/changes/*:refs/changes/*', url: '']]])
             }
         }
 
         stage('Build image') {
             steps {
-              def app = docker.build("9763479341/test")
+              def app = docker.build("")
             }
         }
 
