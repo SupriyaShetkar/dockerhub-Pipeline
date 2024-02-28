@@ -1,5 +1,4 @@
 pipeline {
-    def app
     agent {
         label 'linux_000143'
     }
@@ -22,7 +21,7 @@ pipeline {
 
         stage('Build image') {
             steps {
-                app = docker.build("9763479341/test")
+              def app = docker.build("9763479341/test")
             }
         }
 
