@@ -1,6 +1,10 @@
-node {
+pipeline {
+    agent {
+        label 'linux_000143'
+    }
+/*node {
     def app
-
+*/
     stage('Clone repository') {
       
 
@@ -9,7 +13,7 @@ node {
 
     stage('Build image') {
   
-       app = docker.build("brandonjones085/test")
+       app = docker.build(9763479341/test")
     }
 
 
